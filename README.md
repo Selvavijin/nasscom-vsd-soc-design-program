@@ -174,3 +174,15 @@ Lets explore the files inside the libs.ref
 ![image](https://github.com/user-attachments/assets/79aab84d-8154-4534-9eee-e34fcd98306f)
 
 Here, techlef contains the layer information. mag is the magic files. lib contains all the time files. There, tt-typical, ss-slow, f-fast.
+
+1.3.2.SKY_L2 - Design Preparation Step
+
+In the flow.tcl, we are giving as interatctive mode, The below shown step is to open the openlane
+
+![image](https://github.com/user-attachments/assets/e774f7d9-40b8-47c5-8dcf-744b139fe8ec)
+
+And the command 'package require openlane 0.9' should be done everytime. All the designs that openlane run is from the 'designs' folder. let us see the 'picorv32a' file which has the src, config.tcl and other one file. The 'src' file has the verilog file and the .sdc file. 
+
+Now we will learn the first step which is synthesis. And before that we need to do the design setup stage. And in this stage, the two 'lef' files present are merged so that it is not needed to search the requirements like layer information from two different files and then the preparation stage is completed. and before we go to the synthesis, we will check whether anything new is created in our design directory and a new file named 'runs' is created.
+
+![image](https://github.com/user-attachments/assets/560c787f-879a-4d5b-9341-0881c7560f78)
