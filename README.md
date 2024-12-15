@@ -115,4 +115,48 @@ Once routing is done, we can go for the final layout which undergoes verificatio
 
 ![image](https://github.com/user-attachments/assets/76266911-0742-4e02-8574-eeb8ffb7cba7)
 
+1.2.3.SKY_L3 - Introduction to OpenLANE and Strive chipsets
+
+![image](https://github.com/user-attachments/assets/1cb75eb1-ea4b-4ad3-861e-eab60147434d)
+
+![image](https://github.com/user-attachments/assets/79e6d3bb-69aa-4b6b-bb29-a4c60e5d9d5e)
+
+![image](https://github.com/user-attachments/assets/365a97b0-0e01-44a5-8b9e-4b2f74711d8d)
+
+![image](https://github.com/user-attachments/assets/6037e284-d99b-4d2b-8902-31926a8188f0)
+
+![image](https://github.com/user-attachments/assets/96bf7e7e-ee9e-4a4b-bd2b-3d082319469e)
+
+1.2.4.SKY_L4 - Introduction to OpenLANE detailed ASIC design flow
+
+![image](https://github.com/user-attachments/assets/d941a814-d579-47e7-be86-9af6dc5bfcf9)
+
+![image](https://github.com/user-attachments/assets/c8956dc9-7cda-47b8-9e6f-15b9d6138260)
+
+![image](https://github.com/user-attachments/assets/b2128454-e4a0-4c93-8081-df9078d6a9da)
+
+![image](https://github.com/user-attachments/assets/dc3243f8-1676-40b3-89c2-81a7f9889829)
+
+Openlane is based on several open source products as shown in the diagram below.
+
+![image](https://github.com/user-attachments/assets/58c3ff12-f11b-4ca2-a45f-ba6921bfb5ff)
+
+Fault is a product used for testing 
+
+![image](https://github.com/user-attachments/assets/7b89c084-5d34-49cb-aca6-085eff7ffda7)
+
+When a metal wire is fabricated, it acts as an antenna and causes charge accumulation which damages transistor.
+
+![image](https://github.com/user-attachments/assets/4eace871-8976-43ed-abcc-3214a038bece)
+
+So, this can be avoided by using two solutions
+
+![image](https://github.com/user-attachments/assets/85ebffb6-8bdb-4dd6-a804-f169a89cd5f1)
+
+![image](https://github.com/user-attachments/assets/6a96a823-b55c-4419-b4b5-34198a049e3a)
+
+![image](https://github.com/user-attachments/assets/0f6f1b3d-307e-4031-973e-639bd230e300)
+
+1.3.SKY130_D1_SK3 - Get familiar to open-source EDA tools
+1.3.1.SKY_L1 - OpenLANE Directory structure in detail
 
