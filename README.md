@@ -160,3 +160,4 @@ So, this can be avoided by using two solutions
 1.3.SKY130_D1_SK3 - Get familiar to open-source EDA tools
 1.3.1.SKY_L1 - OpenLANE Directory structure in detail
 
+It is good to say that the Openlane is not a tool but actually a flow because it is a flow that will happen from RTL to GDS using various tools inside the Openlane. It is similar to commertial tool
