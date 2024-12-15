@@ -77,3 +77,42 @@ Getting all the process in chip design in open source is a challenging process b
 
 ![image](https://github.com/user-attachments/assets/ca272f2e-16bf-4882-a57b-ca7cae275b45)
 
+![image](https://github.com/user-attachments/assets/70c85d00-2c52-4e26-8e8c-e26aa4d7f737)
+
+![image](https://github.com/user-attachments/assets/aec68b27-5bf9-4e5c-a1c5-7780956ddbca)
+
+The objective in floorplanning or powerplanning is to plan the silicon area
+
+![image](https://github.com/user-attachments/assets/53d291a9-9c2b-470a-bfd0-9a8fd685de3c)
+
+In Macro floor planning, the rows and the routes are defined which will be used later in the placement and routing stage
+
+![image](https://github.com/user-attachments/assets/843833df-5d46-491c-b120-f35e46879814)
+
+Power planning is used to route the power pins. It is done through using horizontal and vertial metal straps. Typically the power distribution network uses the upper metal layer as they are thicker than lower metal layer. Hence, they have less resistance.
+
+![image](https://github.com/user-attachments/assets/4eacb3b9-7c15-4e4d-aa01-c01065baf0bc)
+
+The next step is placement. Here, the gate level netlist is placed in the macro plan. The conical cells are placed close to each other to avoid the interconnect layer.
+
+![image](https://github.com/user-attachments/assets/71584cb8-8810-4d69-886e-ca3c7b3e978b)
+
+Placement is usually done in two steps. Global followed by the Detailed placement. Global placement tries to find the optimal place for all cells and those cells may overlap also. In detailed placement, the overlaps are avoided.
+
+![image](https://github.com/user-attachments/assets/cf3766ca-a50c-4cda-8dec-d21753f0a29c)
+
+![image](https://github.com/user-attachments/assets/e71be08a-8e52-428d-aa71-d0419ba4c7df)
+
+After the routing is done for clock signal, the routing is done for other objects by using the interconnects with the width and and specifications mentioned in the PDK. The skywalker PDK defines six routing layers. The lowest layer is called the local interconnect layer and uses Titanium. The other five layers are Aluminium layers.
+
+![image](https://github.com/user-attachments/assets/3286bc22-9fb9-4f40-9ab1-b3709989a7e1)
+
+Most routers are grid routers. As the routing grid is huge, divide and conquer approach is used for routing. Global routing uses the coarse grain grids and create the routing guides and the Detailed routing uses the fine grain grids.
+
+![image](https://github.com/user-attachments/assets/eaa40ff2-99d6-4c0b-8f36-7be74ce285bb)
+
+Once routing is done, we can go for the final layout which undergoes verification. DRC checks whether the final layout obeys the design rules. LVS checks whether the final layout matches the gate level netlist. STA make sure that all the timing constraints are met and the circuit run at the designated clock frequency.
+
+![image](https://github.com/user-attachments/assets/76266911-0742-4e02-8574-eeb8ffb7cba7)
+
+
