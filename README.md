@@ -161,3 +161,16 @@ So, this can be avoided by using two solutions
 1.3.1.SKY_L1 - OpenLANE Directory structure in detail
 
 It is good to say that the Openlane is not a tool but actually a flow because it is a flow that will happen from RTL to GDS using various tools inside the Openlane. It is similar to commertial tool
+![image](https://github.com/user-attachments/assets/6b09b8de-6cd9-4030-8ab4-9263c28b2cfb)
+
+In the above shown diagram, the skywater-pdk has all the pdk related files(timing libs, cell libs).
+These silicon control files are compatible to work with commertial EDA tools and not with open source EDA tools. open_pdks mitigate this risk by making it compatible with open source EDA tools(Magic, Netgen). sky130A is a PDK varient. Inside the sky130A, we have two files and the .ref file has the technological related things and .tech has the files related to tool. It is shown in the below image.
+
+![image](https://github.com/user-attachments/assets/5072109b-dd05-47da-b8b3-8e0ec967ec10)
+
+From the libs.ref file, we will be using sky130_fd_sc_hs where, fd-foundry, sc-standard cell, hd-high density.
+Lets explore the files inside the libs.ref
+
+![image](https://github.com/user-attachments/assets/79aab84d-8154-4534-9eee-e34fcd98306f)
+
+Here, techlef contains the layer information. mag is the magic files. lib contains all the time files. There, tt-typical, ss-slow, f-fast.
