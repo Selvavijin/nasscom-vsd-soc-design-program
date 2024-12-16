@@ -229,3 +229,40 @@ now let us see the results, reports in the runs folder. In reports folder, the l
 ![image](https://github.com/user-attachments/assets/7ed23541-23eb-4644-a7a1-566a8cbcd693)
 
 The dimensions of the chip depends on the dimensions of the individual elements(gates, FFs, etc).
+
+![image](https://github.com/user-attachments/assets/81e5e7a0-dcc0-4442-bb62-fb0f77b5f550)
+
+So, let us give a rough units for the standard cells and FFs as 1 unit. As of now we won't consider the wires. So, let us remove the wires and place the cells and FFs.
+
+![image](https://github.com/user-attachments/assets/675acbe6-87ed-4d7f-9734-fece5a29227b)
+
+So, this has 2*2=4 units which is the rough dimension of the netlist. The core is placed inside the die.
+
+![image](https://github.com/user-attachments/assets/e29627a0-428f-4f3e-87b5-ffc823f979f7)
+
+Now, let us try to place that netlist inside the core. here, the netlist occupics the 100% of core. So, this is called 100% utilization.
+
+![image](https://github.com/user-attachments/assets/e959c77a-c92e-4bdf-b93c-4b1b3d0a19a6)
+
+So, the utilization factor is 1. Practically we will not go for 100% utilization. We will go for 50 to 60% utilization. Also, when aspect ratio is 1 the shape is square. Else the shape is rectangle.
+
+![image](https://github.com/user-attachments/assets/3e44dce5-4610-4175-8a5e-81285d24b8f3)
+
+![image](https://github.com/user-attachments/assets/58bcee5b-161f-4291-a208-3c4c2540dcb7)
+
+2.1.2.SKY_L2 - Concept of pre-placed cells
+
+Here only 25% of the chip is occupied and the remaining 75% is used for optimization and placing other cells or routing purposes.
+
+![image](https://github.com/user-attachments/assets/d8270d21-9433-4524-8e5a-8b4de6e568ac)
+
+The next step is to define the locations of pre placed cells. For that purpose, let us understand what is preplaced cells ?. To understand this, let us consider a combinational logic that has n number of gates, lets say some 50k gates. We split that into different sections and use that for different purposes as a Black box. Here the functionality is implemented only once and can be used multiple times.
+
+![image](https://github.com/user-attachments/assets/98718e13-9772-425a-ae4f-062123d2a9b1)
+
+To split these into different blocks, the step is given in the below diagram. Once these blocks are placed in during the placement plase, even if we autonomously do the further steps, the positions of these black boxes will not be affected. These blocks are placed before the placement of other blocks. So, this is called pre-placed cells.
+
+![image](https://github.com/user-attachments/assets/0e68aa45-6f04-437f-af63-0021891124a1)
+
+![image](https://github.com/user-attachments/assets/8d8f7ed1-9ec9-4126-8aff-44741337474f)
+
