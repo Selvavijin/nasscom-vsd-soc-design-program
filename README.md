@@ -186,3 +186,33 @@ And the command 'package require openlane 0.9' should be done everytime. All the
 Now we will learn the first step which is synthesis. And before that we need to do the design setup stage. And in this stage, the two 'lef' files present are merged so that it is not needed to search the requirements like layer information from two different files and then the preparation stage is completed. and before we go to the synthesis, we will check whether anything new is created in our design directory and a new file named 'runs' is created.
 
 ![image](https://github.com/user-attachments/assets/560c787f-879a-4d5b-9341-0881c7560f78)
+
+1.3.3.SKY_L3 - Review files after design prep and run synthesis
+
+Inside the runs folder we have files like tmp, results, reports and logs. except the tmp file everything will be empty as of now because we didn't performed synthesis yet. tmp file contains the merged lef(contains layer and other information) files and other files. the config.tcl file here shows which all default parameters taken by the runs.
+
+![image](https://github.com/user-attachments/assets/378f8763-8a12-4ecc-b686-e5ffb95989bc)
+
+so, after the merging lef files are done using 'prep -design picorv32a' command, synthesis can be done using 'run_synthesis' command. so this will run the yosys synthesis as well as the abc.
+
+![image](https://github.com/user-attachments/assets/6bcb92bc-eb6c-4380-97bd-73722de762db)
+
+1.3.4.SKY_L4 - OpenLANE Project Git Link Description
+
+Now we are running a interactive flow. If we want to run a fully automated flow, we can use the command './flow.tcl -design spm'
+
+1.3.5.SKY_L5 - Steps to characterize synthesis results
+
+First Task:
+Let us calculate the flop ratio, which is the number of D Flip Flop to the total number of cells.
+
+
+![image](https://github.com/user-attachments/assets/5019a0b2-5ccd-4a23-8a13-d802d67d3f04)
+
+now let us see the results, reports in the runs folder. In reports folder, the last yosys file gives the actual synthesis report that we seen in the 'printing statistics' during synthesis.
+
+
+![image](https://github.com/user-attachments/assets/37da2773-9ac5-457c-9fee-afb1db5b4b9d)
+
+
+![image](https://github.com/user-attachments/assets/bc3c7120-42a3-4fad-af4b-3e5fc268a6c0)
