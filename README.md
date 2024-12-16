@@ -266,3 +266,6 @@ To split these into different blocks, the step is given in the below diagram. On
 
 ![image](https://github.com/user-attachments/assets/8d8f7ed1-9ec9-4126-8aff-44741337474f)
 
+2.1.3.SKY_L3 - De-coupling capacitors
+
+Now let us see how to locate these pre-placed cells in the core of the chip. Once these cells are placed in location, it can't be changed during the further design process. And one more thing we need to do.ie) we need to surround these blocks with the de-coupling capacitors.
