@@ -216,3 +216,16 @@ now let us see the results, reports in the runs folder. In reports folder, the l
 
 
 ![image](https://github.com/user-attachments/assets/bc3c7120-42a3-4fad-af4b-3e5fc268a6c0)
+
+
+2.Sky130 Day 2 - Good floorplan vs bad floorplan and introduction to library cells
+2.1.SKY130_D2_SK1 - Chip Floor planning considerations
+2.1.1.SKY_L1 - Utilization factor and aspect ratio
+
+
+![image](https://github.com/user-attachments/assets/6c20a77f-68fe-4e55-991f-2cb281337134)
+
+
+![image](https://github.com/user-attachments/assets/7ed23541-23eb-4644-a7a1-566a8cbcd693)
+
+The dimensions of the chip depends on the dimensions of the individual elements(gates, FFs, etc).
