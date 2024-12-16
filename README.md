@@ -268,4 +268,60 @@ To split these into different blocks, the step is given in the below diagram. On
 
 2.1.3.SKY_L3 - De-coupling capacitors
 
-Now let us see how to locate these pre-placed cells in the core of the chip. Once these cells are placed in location, it can't be changed during the further design process. And one more thing we need to do.ie) we need to surround these blocks with the de-coupling capacitors.
+Now let us see how to locate these pre-placed cells in the core of the chip. Once these cells are placed in location, it can't be changed during the further design process, so placing them is very important. And one more thing we need to do.ie) we need to surround these blocks with the de-coupling capacitors.
+
+![image](https://github.com/user-attachments/assets/f21db4cc-91b0-4a53-9800-518a118749fc)
+
+Let us assume that the inputs pins are in the left side of the core and the output pins are in the right side of the core, so the blocks are placed near the left edge of the core.
+
+![image](https://github.com/user-attachments/assets/dcff2796-0afd-42c2-91fb-4c2bf8b0ed2e)
+
+First let us understand why we need De coupling capacitors.  In the below shown circuit, consider an AND gate. When switching happen in this AND gate(Let us take switching from 0 to 1), it is the responsibility of the Vdd to give supply to the gate to charge the capacitor in the AND gate. Similiarly for switching from 1 to 0, responsibility of Vss to discharge the capacitor. But, if the length of the wire from the supply to the circuit is large, there will be R and L, so in the place where we need to get '1', we get less than that(like 0.7,0.8). Also, even if it is less than '1', the value should be present between the noise margin, other wise the value will be undefined.
+
+![image](https://github.com/user-attachments/assets/6e443daf-b035-410a-b955-cc5f101cd6d1)
+
+![image](https://github.com/user-attachments/assets/c11bbe80-0285-437c-a3fa-e9fec8c73de9)
+
+![image](https://github.com/user-attachments/assets/ad0a8fa7-2d88-42b8-afc0-3ef3c05b7f9f)
+
+To solve this problem, we can use Decoupling capacitors. This is a big capacitor, which can charge till the voltage present in the source. Since the capacitor is present close to the circuit, there will not be any voltage drop in the circuit.
+
+![image](https://github.com/user-attachments/assets/865a8072-926d-4b90-8cfd-bab2563af048)
+
+When there is switching operation happening, the Decoupling capacitor spends charge in the circuit and when the switching operation is not occuring, the capacitor spends time in charging from the main source. So, through this approach, the problem of local communication is solved. The problem of global communication can be solved by using the Power planning method.
+
+![image](https://github.com/user-attachments/assets/1bf1ca9c-11f5-4b0f-bf19-b33fbea50bf7)
+
+2.1.4.SKY_L4 - Power planning
+
+let us consider the same circuit that was considered above and now assume it as a black box. ie) it has to be used multiple times in the chip. 
+
+![image](https://github.com/user-attachments/assets/0fe46d2b-ed93-4f11-b32e-2e910ad48f72)
+
+Let us consider four black boxes and the vss and vdd is connected to all of them. Now let us assume that there is a connection between the first and the last block and the operation is switching from 0 to 1. To make this operation performed, the switch state as mentioned in the diagram should be maintained from the starting to end. To make this done, we have to maintain the Vdd in the red line but we can't add coupling capacitor everywhere. Let us assume the red wire as the 16-bit bus. The value in the wire will not be Vdd because it is distant from the source. So, let us see what will be the value of the red line.
+
+![image](https://github.com/user-attachments/assets/8f1cbfcb-bc6e-4cf2-8d0f-883d5f94310c)
+
+Now let us take the initial conditions of 16-bit bus. It is shown in the diagram below. They have different lines and each have different values. Let us say that it is connected to a inverter, so 1 has to be 0(ie discharge) and 0 has to be 1 (ie charge).  
+
+![image](https://github.com/user-attachments/assets/4955210f-0244-410a-a15b-a669618bbe74)
+
+All of this happen at the same time and we have single ground for the complete 16-bit bus, which results in the ground bounce. If the Ground bounce exceeds the noise margin level, it will results in undefined results. This happens during discharge.
+
+![image](https://github.com/user-attachments/assets/48751270-f42c-4252-8198-3f7ec801d59b)
+
+And during Charging, all the points demanding for voltage at the same time and there is only a single point. At that time there will be a Voltage Droop. It is also OKay when it is within the Noise margin.
+
+![image](https://github.com/user-attachments/assets/2b2f03b0-3065-4e95-8e54-3730ef15fa31)
+
+So these problems can be avoided by adding multiple supple sources.
+
+![image](https://github.com/user-attachments/assets/e8e009db-afcb-4b83-ac62-8440d4ffdc51)
+
+![image](https://github.com/user-attachments/assets/aa91310d-5b4f-4734-a398-5df249758114)
+
+This is how the global communication is done. The blocks are placed anywhere and the power is taken or dumped in the nearby Vdd or Vss respectively. This method is used in modern chips. The entire chip is connected with the Vdd, Vss and a Contact.
+
+
+
+
