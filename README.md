@@ -347,3 +347,7 @@ Now, let us place the above circuit in the core. For that, let us first place th
 We should not place any cells in between the die and core. Because, to make sure that the automated placement and routing tools doesn't place any cells here. Becuause, this area is reserved for pin configuration. This is called the Logical cell blockage. The floorplanning process is over till this step and then we will continue Placement and Routing steps.
 
 ![image](https://github.com/user-attachments/assets/e5a4d435-365e-4c1c-bcb9-e8bcfd15c488)
+
+2.1.6.SKY_L6 - Steps to run floorplan using OpenLANE
+
+Standard cells are placed during the placement stage and not during the floorplanning stage.
