@@ -322,6 +322,28 @@ So these problems can be avoided by adding multiple supple sources.
 
 This is how the global communication is done. The blocks are placed anywhere and the power is taken or dumped in the nearby Vdd or Vss respectively. This method is used in modern chips. The entire chip is connected with the Vdd, Vss and a Contact.
 
+2.1.5.SKY_L5 - Pin placement and logical cell placement blockage
 
+Let us assume the below circuit for understanding the pin placement. This has two sections of same circuit and have two blocks of preplaced cells and connected as shown in the below diagram.
 
+![image](https://github.com/user-attachments/assets/36884184-d16f-4336-a35a-61e94302a600)
 
+Again let us consider the circuit with the same section as shown above with different colous and also has a preplaced cell.
+
+![image](https://github.com/user-attachments/assets/a17b7ec9-08df-47dc-8255-d93df596ccae)
+
+So the below show is the complete design. 
+
+![image](https://github.com/user-attachments/assets/52d121ca-df28-4e17-b48e-5a42787227b0)
+
+Let us modify the connections as shown below. And this type of connection can be obtained by using the verilog or vhdl. And this is called the Netlist.
+
+![image](https://github.com/user-attachments/assets/a57d1e01-c4dc-48e5-a0d3-d2845a2c0ba8)
+
+Now, let us place the above circuit in the core. For that, let us first place the pin configuration in between the core and die. The pin configuration is fixed by the designer. Here we use, left side for input ports and right side for output ports. Also, it should not affect the preplaced cells. Also note that the clk(in,out) port has higher width. Because, it has to be circulated all over the circuit and so it need a low resistance path as it is driven continuously. 
+
+![image](https://github.com/user-attachments/assets/a293e4a7-8aca-4ed2-82bb-19b92cd5ad76)
+
+We should not place any cells in between the die and core. Because, to make sure that the automated placement and routing tools doesn't place any cells here. Becuause, this area is reserved for pin configuration. This is called the Logical cell blockage. The floorplanning process is over till this step and then we will continue Placement and Routing steps.
+
+![image](https://github.com/user-attachments/assets/e5a4d435-365e-4c1c-bcb9-e8bcfd15c488)
