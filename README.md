@@ -315,7 +315,7 @@ And during Charging, all the points demanding for voltage at the same time and t
 ![image](https://github.com/user-attachments/assets/2b2f03b0-3065-4e95-8e54-3730ef15fa31)
 
 So these problems can be avoided by adding multiple supple sources.
-
+ 
 ![image](https://github.com/user-attachments/assets/e8e009db-afcb-4b83-ac62-8440d4ffdc51)
 
 ![image](https://github.com/user-attachments/assets/aa91310d-5b4f-4734-a398-5df249758114)
