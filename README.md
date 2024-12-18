@@ -404,3 +404,38 @@ In a previous video, it is mentiond that the IO mode is 1 to keep the pins equid
 Also we have tapcells which is used to avoid the latch up condition in the cmos devices. They connect the Nwell to the Vdd and substrate to the Ground. These tap cells are diagonally equidistant. As mentioned before, the standard cells are not taken into consideration. But, standard cells present here in the lower left corner. If we wish to make any changes, we can make in design related config.tcl file which makes it more flexible.
 
 ![image](https://github.com/user-attachments/assets/2d4140b3-885b-45c2-a49a-555883a08a54)
+
+2.2.SKY130_D2_SK2 - Library Binding and Placement
+2.2.1.SKY_L1 - Netlist binding and initial place design
+
+ The next step is to bind netlist with physical cells. Genrally we find the functionality of the gate by looking into it like, if it is OR shaped gate, it performs Addition. But, in real time, there is no different physical shape to gate. Instead, a gate will be given a specific width and height.
+
+ ![image](https://github.com/user-attachments/assets/1e246303-7b4e-4acb-afeb-d0f2db8a9ca2)
+
+![image](https://github.com/user-attachments/assets/7e7b95ac-28b7-45af-a514-a11834f86391)
+
+All these shape and size and delay information are found in the library file. There are two library files. In one file there will be information about the shape and size of the gates and in another file there will be delay of gates specified. Also it contains various flavors of the same cells.
+
+Lets say that the number '2' indicates the AND gate. When the size is bigger, there will be low resistance path and the gate will be faster. So, these are the various flavours.
+
+![image](https://github.com/user-attachments/assets/2127b5e2-efb3-4541-b623-150013431139)
+
+The next step is to take this and place it in the floorplanning. In the figure shown below, only the last image is placed in floorplan and the middle picture is used only for connectivity purpose.
+
+![image](https://github.com/user-attachments/assets/6d0f69d6-bf46-4fbe-b95f-71b456a56a2b)
+
+Now we will place the components and it should not affect the preplaced cells that are present already. Also, the components we are placing should close as possible with the input and output ports to minimize the delay. In the figure shown below, the orange colour gate will have some delay and the yellow color gates will have very minimum delay because the gates are close to each other.
+
+![image](https://github.com/user-attachments/assets/7c4345d3-b349-47f4-80d0-efdf1b8068e6)
+
+2.2.2.SKY_L2 - Optimize placement using estimated wire-length and capacitance
+
+The blue and green colour gates are placed in a manner as shown in the figure below because of the distance between the input and output ports. This problem can be solved using optimize placement.
+
+![image](https://github.com/user-attachments/assets/6677d805-7742-46f7-80f8-b7cead5703f4)
+
+Let us assume Din2 and FF1 of yellow gate. Here, the distance is large. So we find out the capacitance between the gate and Din2. This step is done before the routing stage. So, since the distance is large, we use repeaters(Buffers) to maintain the signal integrity. The disadvantage here is the loss of area. Repeaters and Area are inversely proportional to each other.
+
+As shown in the diagram below, we place repeaters between Din2 and FF1 to maintain signal integrity. The decision to place repeators will be based on the estimation of wirelength and capacitance which we will see in the upcoming videos.
+
+![image](https://github.com/user-attachments/assets/047375c0-50e1-4506-bcda-38aefc427c43)
