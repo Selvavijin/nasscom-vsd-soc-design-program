@@ -390,3 +390,17 @@ By looking into the .def file, we don't know where what is placed. So, we can se
 ![image](https://github.com/user-attachments/assets/930c6763-7e11-4e52-b22a-2ea7f97e2a0c)
 
 Here, -T implies tech file.
+
+2.1.8.SKY_L8 - Review floorplan layout in Magic
+
+To work with the Magic file, first click s to select all and press v to fit to the screen. To zoom a particular area, first left mouse click, then right mouse click followed by click z to zoom.
+
+![image](https://github.com/user-attachments/assets/bd2f2f0f-07bd-421b-9d38-889bf19979c7)
+
+In a previous video, it is mentiond that the IO mode is 1 to keep the pins equidistant, so the pins are equidistant as shown in the above diagram. To select a particular object from the layout, hover the cursor on that object and click s to select. When a object is selected and we type what in the window that is generated along with the magic layout, we will get the details of the particular object as shown below. Also, there are decap cells in the boundries as shown in the image which are called the end endcap cells.
+
+![image](https://github.com/user-attachments/assets/4db73577-938c-400b-9619-2f524284bea8)
+
+Also we have tapcells which is used to avoid the latch up condition in the cmos devices. They connect the Nwell to the Vdd and substrate to the Ground. These tap cells are diagonally equidistant. As mentioned before, the standard cells are not taken into consideration. But, standard cells present here in the lower left corner. If we wish to make any changes, we can make in design related config.tcl file which makes it more flexible.
+
+![image](https://github.com/user-attachments/assets/2d4140b3-885b-45c2-a49a-555883a08a54)
