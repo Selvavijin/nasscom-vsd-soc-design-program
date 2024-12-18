@@ -352,3 +352,41 @@ We should not place any cells in between the die and core. Because, to make sure
 
 Standard cells are placed during the placement stage and not during the floorplanning stage.
 There are switches present in the synthesis, floorplanning, placement that can be seen from the location openlane->Configurations->Readme file(The variables are the switches). Some of the switches in the floorplanning are, core util, aspect ratio, IO hmetal. Some of the swiches in the placement are Target Density which mentions whether the netlist is closely packed or not by representing the value between 0 to 1. Also in that same location, there are many .tcl files. In that the floorplan.tcl contains the default parameters for the floorplanning. In that, if the FP IO mode is 1, the pin position is random but is equidistant and if 0, the pin position won't be equidistant.
+Floorplaning can be runned using 'run_floorplan' command.
+
+![image](https://github.com/user-attachments/assets/69981623-9e83-46a0-926b-e82c0ad41d02)
+
+![image](https://github.com/user-attachments/assets/b694135f-4c49-43c0-bfad-befc8ce8c890)
+
+The variables or switches are shown here from openlane->Configurations->Readme file, shows the requirements for the design. The switches required for the floorplan of the design is shown below.
+
+![image](https://github.com/user-attachments/assets/323fbf37-a423-4d1b-a757-368701342931)
+
+Now let us see, where are these switches set. In the same directory itself, open the floorplan and see the default values set for the floorplan in openlane.
+
+![image](https://github.com/user-attachments/assets/b7ea5005-5037-4597-b9ea-b85a6c1bf1d2)
+
+In the below image, the left terminal shows the system default files and given lowest priority and in the right side, we saw the files earlier and the second priority is given to config.tcl and the first priority is given to the next green coloured text starting with sky130...
+
+![image](https://github.com/user-attachments/assets/09af0f4f-d6af-4e15-b6ad-58c3d1d22302)
+
+The parameters such as io vmetal and io hmetal in config.tcl is +1 more than what is specified in default.
+
+
+
+2.1.7.SKY_L7 - Review floorplan files and steps to view floorplan
+
+Now we will check whether the switches present after floorplan take precedence over the system default switches. Here, if we open the runs->logs->floorplan->ioplacer file and compare the io v and h metal with the config.tcl, the value present in the ioplacer file is one more than that of config.tcl(default value).
+The config.tcl file shown below shows all the configurations taken by the current flow.
+
+![image](https://github.com/user-attachments/assets/e85e28a1-d096-4865-ab2b-f033575048fc)
+
+To see the floor plan file, go to results->floorplan. Here, Diearea (0 0) implies the least x and y value and the next value represents the highest x and y value. 
+
+![image](https://github.com/user-attachments/assets/ef532966-863c-4c53-a9f5-1d3065a5c103)
+
+By looking into the .def file, we don't know where what is placed. So, we can see the actual layout in magic. 
+
+![image](https://github.com/user-attachments/assets/930c6763-7e11-4e52-b22a-2ea7f97e2a0c)
+
+Here, -T implies tech file.
