@@ -351,3 +351,4 @@ We should not place any cells in between the die and core. Because, to make sure
 2.1.6.SKY_L6 - Steps to run floorplan using OpenLANE
 
 Standard cells are placed during the placement stage and not during the floorplanning stage.
+There are switches present in the synthesis, floorplanning, placement that can be seen from the location openlane->Configurations->Readme file(The variables are the switches). Some of the switches in the floorplanning are, core util, aspect ratio, IO hmetal. Some of the swiches in the placement are Target Density which mentions whether the netlist is closely packed or not by representing the value between 0 to 1. Also in that same location, there are many .tcl files. In that the floorplan.tcl contains the default parameters for the floorplanning. In that, if the FP IO mode is 1, the pin position is random but is equidistant and if 0, the pin position won't be equidistant.
