@@ -436,6 +436,26 @@ The blue and green colour gates are placed in a manner as shown in the figure be
 
 Let us assume Din2 and FF1 of yellow gate. Here, the distance is large. So we find out the capacitance between the gate and Din2. This step is done before the routing stage. So, since the distance is large, we use repeaters(Buffers) to maintain the signal integrity. The disadvantage here is the loss of area. Repeaters and Area are inversely proportional to each other.
 
-As shown in the diagram below, we place repeaters between Din2 and FF1 to maintain signal integrity. The decision to place repeators will be based on the estimation of wirelength and capacitance which we will see in the upcoming videos.
+As shown in the diagram below, we place repeaters between Din2 and FF1 to maintain signal integrity. The decision to place repeators will be based on the estimation of wirelength and capacitance and transition value and slew value which we will see in the upcoming videos.
 
 ![image](https://github.com/user-attachments/assets/047375c0-50e1-4506-bcda-38aefc427c43)
+
+2.2.3.SKY_L3 - Final placement optimization
+
+When we don't want any delay and work at high speed, we can abet the circuit as shown for the orange gates.
+
+![image](https://github.com/user-attachments/assets/1a472301-0e81-4836-a43f-682f74ff0a29)
+
+Once the placement is done, we have to check whether what we have done is correct or not. Since there are no clock, we have to consider the clock to reach the gate is ideal or zero and look into the data path. So, we have to do a setup timing analysis(Hold will not make any sense since there is no clock). Based on the timing analysis we will come to know whether the placement we done is reasonable. If the timing doesn't meet the specifications, we have to correct this by this step itself. because, it will go worse if we go to further steps and then change it.
+
+2.2.4.SKY_L4 - Need for libraries and characterization
+
+Let us see the technical IC design flow that every design needs to go through. CTS(Clock tree synthesis) take care of sending the clock signals to the cells at the right or equal time. The clock buffers that is present in the below diagram in triangular shape make sure that the clock signals has equal rise and fall time. Then, while routing two cells, the properties of the cells should need to be taken care.
+
+![image](https://github.com/user-attachments/assets/8220da0a-6110-4199-b204-7ee589e9db82)
+
+The final thing in IC design flow is STA
+
+![image](https://github.com/user-attachments/assets/f62e7a6d-c30f-4f07-87a9-13e25af91314)
+
+The common thing among all these steps is the Gates. How library is related to this is, the gates are represented using the values that are represented in the library. Only then the EDA tool will understand which gate is this. Eg: We will understand the AND gate by simply giving two inputs and one output, but the EDA tool will not understand that.
