@@ -577,9 +577,34 @@ in_fall_thr(it is the point in falling waveform, used to find the delay).
 
 2.4.2.SKY_L2 - Propagation delay and transition time
 
-If it is not taken care, it might lead to unexpected result.
+Timing characterization for propagation delay:
+If the propagation delay is not taken care, it might lead to unexpected results.
 Let us consider the same buffer cicuit that was shown above. We find the delay of buffer using the formula mentioned in the diagram. Also, let us take the value as 50% of the waveform and this may vary in industries.
 
 <img width="922" alt="image" src="https://github.com/user-attachments/assets/6be5e447-6842-416e-84c5-88ecd5124fcb" />
 
 Let us take a sample waveform and see how we can apply all these in that waveform.
+
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/de3032d2-c78e-4b50-8610-2277613c0ece" />
+
+Here, the in_rise is taken as 50% and the out_fall is also taken as 50% and the delay is calculated. Here there is no problem. But, the problem arises if by any chance if the threshold is in other place of waveform, there are chances of getting negative delay value which is not desired as shown below.
+
+<img width="913" alt="image" src="https://github.com/user-attachments/assets/d7d61180-ad2b-4ff5-baac-93a667ea185f" />
+
+There is another case when we choose the correct threshold but still we get the negative value if the waveform is like as shown in the below figure. This problem occurs if the wire length is high due to which the delay occurs(ie: The distance between the two inverters is large)
+
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/182d09b5-ac25-499b-976b-dba79b067155" />
+
+If we zoom into the center of graph that is shown above, we will get the delay and that is negative which is not desired.
+
+<img width="919" alt="image" src="https://github.com/user-attachments/assets/52257ecb-26f0-499f-a5ad-b4b3903c7398" />
+
+Timing characterization for transition time:
+  It is quite easier to calculate. We can find it by subtracting the high and low threshold of rise(fall) waveform. 
+Here there is no input or output delay, there is only rise delay, fall delay and rise transition time and fall transition time. Now, let us take the value for the low threshold as 20% and for high threshold as 80% and calculate the transition time is calculated.
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/0f186196-e294-4ff5-acc9-587958d7d350" />
+
+3.Sky130 Day 3 - Design library cell using Magic Layout and ngspice characterization
+3.1.SKY130_D3_SK1 - Labs for CMOS inverter ngspice simulations
+3.1.1.SKY_L0 - IO placer revision
