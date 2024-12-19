@@ -512,6 +512,8 @@ Circuit design :
 Layout Design:
    Here, the function is implemented through the MOS transistor and the next step is to get the Pmos and Nmos network graph of the design that we implemented.
 
+<img width="911" alt="image" src="https://github.com/user-attachments/assets/a67a3cc1-a6ce-49b2-bcc0-d3ac475ef454" />
+
 2.3.3.SKY_L3 - Layout design step
 
 The next step in Layout design is to draw the Euler's path.
@@ -531,5 +533,24 @@ Characterization:
 The next step is to extract the parasitics from this particular layout and characterize in terms of timing, noise, power.
 
 <img width="904" alt="image" src="https://github.com/user-attachments/assets/fe08e880-552e-4ae2-9739-2daa377ae2ce" />
+
+2.3.4.SKY_L4 - Typical characterization flow
+
+Before going into the characterization flow, we will see what are the things we have now. 
+
+<img width="898" alt="image" src="https://github.com/user-attachments/assets/54abe5d1-394d-41dc-a16f-1ba924c7536f" />
+
+We have the description of the buffer which contains subset of inverter which has the nmos and pmos models. Both ineverters shown in the diagram are called from the subset and the resistance, capacitance are shown in the main description.
+The spice models of the NMOS and PMOS are shown in the below image. These spice models are nothing but the characteristics of nmos and pmos.
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/487dab40-41bd-43c9-9ad1-1762aea27451" />
+
+These are the things that are available with us. Now let us do the characterization flow. SO, the first step is to read the models(nmos, pmos), the second step is to read the extraced spice netlist, the third step is to define the behavior of the buffer. The next step is to read the subcircuit of inverters. The next step is to read the necessory power supplys. The sixth step is to apply the stimulus. The next step is to provide the necessory output capacitors. the last(8th) next step is to give the necessory simulation commands. In this case we are doing transient analysis so we are using .trans. Then we have to feed in all the inputs from the 8 steps in the form of configuration software called GUNA. And this software will generate Timing, noise and power models.
+
+<img width="862" alt="image" src="https://github.com/user-attachments/assets/ec621ded-9163-4d47-b652-98c033cec11a" />
+
+<img width="864" alt="image" src="https://github.com/user-attachments/assets/1ef1fe55-e8f8-45de-bc72-4f7968999215" />
+
+<img width="914" alt="image" src="https://github.com/user-attachments/assets/47605f30-38e7-463c-8961-e14de5dfe374" />
 
 
