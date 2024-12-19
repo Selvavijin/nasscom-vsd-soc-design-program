@@ -459,3 +459,7 @@ The final thing in IC design flow is STA
 ![image](https://github.com/user-attachments/assets/f62e7a6d-c30f-4f07-87a9-13e25af91314)
 
 The common thing among all these steps is the Gates. How library is related to this is, the gates are represented using the values that are represented in the library. Only then the EDA tool will understand which gate is this. Eg: We will understand the AND gate by simply giving two inputs and one output, but the EDA tool will not understand that.
+
+2.2.5.SKY_L5 - Congestion aware placement using RePlAce
+
+Placement occurs in two stages global and detailed. The objective of global placement is to reduce the 
