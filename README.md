@@ -545,12 +545,35 @@ The spice models of the NMOS and PMOS are shown in the below image. These spice 
 
 <img width="943" alt="image" src="https://github.com/user-attachments/assets/487dab40-41bd-43c9-9ad1-1762aea27451" />
 
-These are the things that are available with us. Now let us do the characterization flow. SO, the first step is to read the models(nmos, pmos), the second step is to read the extraced spice netlist, the third step is to define the behavior of the buffer. The next step is to read the subcircuit of inverters. The next step is to read the necessory power supplys. The sixth step is to apply the stimulus. The next step is to provide the necessory output capacitors. the last(8th) next step is to give the necessory simulation commands. In this case we are doing transient analysis so we are using .trans. Then we have to feed in all the inputs from the 8 steps in the form of configuration software called GUNA. And this software will generate Timing, noise and power models.
+These are the things that are available with us. Now let us do the characterization flow. So, the first step is to read the models(nmos, pmos), the second step is to read the extraced spice netlist, the third step is to define the behavior of the buffer. The next step is to read the subcircuit of inverters. The next step is to read the necessory power supplys. The sixth step is to apply the stimulus. The next step is to provide the necessory output capacitors. the last(8th) next step is to give the necessory simulation commands. In this case we are doing transient analysis so we are using .trans. Then we have to feed in all the inputs from the 8 steps in the form of configuration software called GUNA. And this software will generate Timing, noise and power models.
 
 <img width="862" alt="image" src="https://github.com/user-attachments/assets/ec621ded-9163-4d47-b652-98c033cec11a" />
 
 <img width="864" alt="image" src="https://github.com/user-attachments/assets/1ef1fe55-e8f8-45de-bc72-4f7968999215" />
 
 <img width="914" alt="image" src="https://github.com/user-attachments/assets/47605f30-38e7-463c-8961-e14de5dfe374" />
+
+2.4.SKY130_D2_SK4 - General timing characterization parameters
+2.4.1.SKY_L1 - Timing threshold definitions
+
+Here we will understand about the power.lib, timing.lib and noise.lib. These are important concepts because these are important to understand GUNA software.
+
+<img width="916" alt="image" src="https://github.com/user-attachments/assets/6ec3bd65-f216-43aa-a86b-114f66beca5e" />
+
+Here we have two plots which are used to understand the different threshold point of waveform which are called Timing threshold definitions. slew_low_rise_thr says that if we want to find the slope or slew of a waveform, we need to have two any different points from the waveform. But, we need to define these values. And this value of the threshold could be 20% or 30%. Let us take it as 20%. 
+slew_high_rise_thr is the value of 20% from the top. The slew can be calculated from the timing difference between high and low slew threshold. This is for the rising waveform.similarly for the falling waveform, we have, slew_low_fall_thr and slew_high_fall_thr.
+
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/a8693a76-460e-4260-b76f-68be0896364e" />
+
+To understand the next 4 threshold let us take the input stimulus and the output of the buffer. We calculated the slew initially, similarly we can also find the delay of an inverter, we need some points to calculate. The required points are one input point and one output point. We take the 50%(center point) for our purpose.
+
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/cf117834-c591-4541-ae35-44fb4a8ecba2" />
+
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/1acff943-aa1d-401e-97b2-5e127fd25b90" />
+
+A buffer will get two kinds of delay(rise delay and fall delay).
+slew_low_rise_thr(the value of rising waveform, lowest point, used to find the slew)
+in_fall_thr(it is the point in falling waveform, used to find the delay).
+
 
 
