@@ -435,7 +435,7 @@ The blue and green colour gates are placed in a manner as shown in the figure be
 ![image](https://github.com/user-attachments/assets/6677d805-7742-46f7-80f8-b7cead5703f4)
 
 Let us assume Din2 and FF1 of yellow gate. Here, the distance is large. So we find out the capacitance between the gate and Din2. This step is done before the routing stage. So, since the distance is large, we use repeaters(Buffers) to maintain the signal integrity. The disadvantage here is the loss of area. Repeaters and Area are inversely proportional to each other.
-
+ 
 As shown in the diagram below, we place repeaters between Din2 and FF1 to maintain signal integrity. The decision to place repeators will be based on the estimation of wirelength and capacitance and transition value and slew value which we will see in the upcoming videos.
 
 ![image](https://github.com/user-attachments/assets/047375c0-50e1-4506-bcda-38aefc427c43)
