@@ -513,3 +513,23 @@ Layout Design:
    Here, the function is implemented through the MOS transistor and the next step is to get the Pmos and Nmos network graph of the design that we implemented.
 
 2.3.3.SKY_L3 - Layout design step
+
+The next step in Layout design is to draw the Euler's path.
+
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/f75943b9-0f3b-409f-b26a-c8cc4d4806c2" />
+
+Based on Euler's path, the next step is to draw the stick diagram.
+
+<img width="929" alt="image" src="https://github.com/user-attachments/assets/9db011f5-7db5-405c-948b-b5ec73714b45" />
+
+The next step is to get is layout diagram as per the rules like DRC rules in the input and get the layout done.
+
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/2e79c9cb-e051-4a97-b84f-21e2c9284447" />
+
+The output of the Layout design will be GDS II, lef(contains the width and height of the cell), extracted spice netlist(parasitics or the R and C of each and every element present there)
+Characterization:
+The next step is to extract the parasitics from this particular layout and characterize in terms of timing, noise, power.
+
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/fe08e880-552e-4ae2-9739-2daa377ae2ce" />
+
+
