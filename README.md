@@ -462,4 +462,33 @@ The common thing among all these steps is the Gates. How library is related to t
 
 2.2.5.SKY_L5 - Congestion aware placement using RePlAce
 
-Placement occurs in two stages global and detailed. The objective of global placement is to reduce the 
+Placement occurs in two stages global and detailed. The objective of global placement is to reduce the Half parameter wire length(HPWL) and once we run the command run_placement, number of iterations will run and as the number of iterations increase, the overflow value will gets reduced. 
+
+![image](https://github.com/user-attachments/assets/616333b1-3634-4364-84e4-257080fc8067)
+
+The standard cells are placed in this stage and the placed standard cells are shown below. Usually, the power distribution networks(Vdd, ground) are placed in the floorplan stage itself. But in Openlane, we will do it before routing.
+
+![image](https://github.com/user-attachments/assets/c6924e35-3711-4478-a934-ac5e78e37b07)
+
+![image](https://github.com/user-attachments/assets/d8112398-6bea-4e77-ab02-85285418bd36)
+
+2.3.SKY130_D2_SK3 - Cell design and characterization flows
+2.3.1.SKY_L1 - Inputs for cell design flow
+
+Standard cells are placed in the library which contains all the information about the gates or standard cells. All the cells present in the ciruit other than preplaced cells are standard cells.
+
+![image](https://github.com/user-attachments/assets/01fc68eb-5d50-4eaa-8300-0dd4e041c5de)
+
+The library will have cells of same name(AND, OR) with different functionality, size, Voltage Vt. 
+
+![image](https://github.com/user-attachments/assets/b294d5bb-4e44-4167-8f52-f69b228b2b42)
+
+Let us take an inverter for example. We will say an inverter as a one input cell. But, in IC design flow, it has some more things such as timing behaviour, shape, power characteristics. To design a inverter, it has to go a typical flow.
+
+![image](https://github.com/user-attachments/assets/473e2c8b-b153-4107-8238-dfdcb696c53f)
+
+The inputs to design a inverter will come from the foundry using PDKs which consists of DRC & LVS rules, SPICE models, library and user defined specs. 
+
+![image](https://github.com/user-attachments/assets/8bf5f79d-5f6a-42a0-a947-77d675701689)
+
+The SPICE model has different parameters. The circled variables in the idendities shows the SPICE model parameters where the values will be given form the foundry.
