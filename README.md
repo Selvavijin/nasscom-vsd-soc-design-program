@@ -575,5 +575,11 @@ A buffer will get two kinds of delay(rise delay and fall delay).
 slew_low_rise_thr(the value of rising waveform, lowest point, used to find the slew)
 in_fall_thr(it is the point in falling waveform, used to find the delay).
 
+2.4.2.SKY_L2 - Propagation delay and transition time
 
+If it is not taken care, it might lead to unexpected result.
+Let us consider the same buffer cicuit that was shown above. We find the delay of buffer using the formula mentioned in the diagram. Also, let us take the value as 50% of the waveform and this may vary in industries.
 
+<img width="922" alt="image" src="https://github.com/user-attachments/assets/6be5e447-6842-416e-84c5-88ecd5124fcb" />
+
+Let us take a sample waveform and see how we can apply all these in that waveform.
