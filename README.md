@@ -494,3 +494,22 @@ The inputs to design a inverter will come from the foundry using PDKs which cons
 The SPICE model has different parameters. The circled variables in the idendities shows the SPICE model parameters where the values will be given form the foundry.
 
 ![image](https://github.com/user-attachments/assets/7fb5e802-5307-4c87-897b-c47f9392086e)
+
+2.3.2.SKY_L2 - Circuit design step
+
+In the library and user-defined specs, the example is the cell-height which is between the ground and power line. The drive strength varies from 1 to x. If the drive strength is low for a wire, then it will be difficult for that wire to drive huge wire. This drive strength decides the cell width.
+
+<img width="907" alt="image" src="https://github.com/user-attachments/assets/47fc20c6-7836-47e5-8d11-e43158198ef9" />
+
+Also, it is responsible for the user to define the metal layers when needed, also the pin location where ever additionally we need.
+
+<img width="883" alt="image" src="https://github.com/user-attachments/assets/8bc721b2-fe3a-4ef5-9375-f4a806212005" />
+
+Now it is the responsibility of the developer to obey the steps mentioned in the inputs and follow to design the library cell. So, the next step is Design steps which consists of Circuit design, layout design and characterization.
+Design steps:
+Circuit design :
+   In this step, the the pmos and nmos are designed in such a way that it meets the library file requirements like setting the width and height, current of transistors. Once we know the W/L of the Nmos and Pmos, we enter into the second step which is layout design. Before going into that, the output we get from the circuit design is the CDL(Circuit Description Language).
+Layout Design:
+   Here, the function is implemented through the MOS transistor and the next step is to get the Pmos and Nmos network graph of the design that we implemented.
+
+2.3.3.SKY_L3 - Layout design step
