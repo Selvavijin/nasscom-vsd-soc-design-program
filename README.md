@@ -492,3 +492,5 @@ The inputs to design a inverter will come from the foundry using PDKs which cons
 ![image](https://github.com/user-attachments/assets/8bf5f79d-5f6a-42a0-a947-77d675701689)
 
 The SPICE model has different parameters. The circled variables in the idendities shows the SPICE model parameters where the values will be given form the foundry.
+
+![image](https://github.com/user-attachments/assets/7fb5e802-5307-4c87-897b-c47f9392086e)
