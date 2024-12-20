@@ -608,3 +608,11 @@ Here there is no input or output delay, there is only rise delay, fall delay and
 3.Sky130 Day 3 - Design library cell using Magic Layout and ngspice characterization
 3.1.SKY130_D3_SK1 - Labs for CMOS inverter ngspice simulations
 3.1.1.SKY_L0 - IO placer revision
+
+It is difficult to design the inverter from the scratch. So, we will download pads from the github and see how things work. Now, let us see how the IO pins are placed in the code. Right now it is equidistant and randomly placed. Let us say that we need to change the IO pins to another IO strategy(current strategy is present in floorplan.tcl file). There are 4 strategies supported by IO space(An opensource EDA tool to place the pins around the core). Currently the IO mode is set to 1. Also, 0 is one of the modes, 2 is also one of the modes. Now, let us switch the mode to 2. The output file is shown below.
+
+![image](https://github.com/user-attachments/assets/391ac35a-a3a9-4740-ae2d-28ca23c1aec0)
+
+3.1.2.SKY_L1 - SPICE deck creation for CMOS inverter
+
+To do the SPICE simulation, the first step is to create the SPICE deck which is the connectivity information about the netlist. Here we need to mention the connectivity of the substrate also. So, it is shown as arrow. There are lot of theory in the cload. Now we are not going to looking into it. Just we are taking a value for cload and proceed.
