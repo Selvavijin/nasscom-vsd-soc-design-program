@@ -771,3 +771,43 @@ Now we have created the well region. But, the depth of the well is not finalized
 Then we put this setup in a very high temperature about 1100 degree celcius for 4 to 6 hours which is called the drive in diffusion. This make the diffusion of wells. This is called Twin Tub process because there are two tub like structure(N and P well). This is the bucket creation.
 
 <img width="926" alt="image" src="https://github.com/user-attachments/assets/ac095e94-38d1-4612-8bbb-82c5edf8d9c9" />
+
+3.2.3.SKY_L3 - Formation of gate terminal
+
+The gate is the one which control the threshold voltage(turning ON voltage of transistor).
+
+<img width="942" alt="image" src="https://github.com/user-attachments/assets/2230f755-e13a-4273-b024-e25f62274bac" />
+
+So, we look into how to control the Cox and Na in further steps. 
+This is the 16-mask process and now we are using the 4th mask. And the steps remain same.
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/5b0556af-bb33-4698-b5bb-2332bddb5618" />
+
+Again we are going to use Boron but with low energy. Because, now we need the Boron to be just in the surface. The dose of the Boron is maintained in such a manner that we achieve the required doping concentration and this concentration is dependent on the threshold voltage. Again, there will be damages in the Sio2 layer and we will see how to repair it later.
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/177317b6-1fbe-4ed8-ba25-42bee29e2e5f" />
+
+Similarly it is done for N-well and here we can use Phorsphorus or Arsenic which are n-type impurity.The energy required is also very low.
+
+<img width="943" alt="image" src="https://github.com/user-attachments/assets/04cdc843-f504-4b3b-98a5-fb45ef1bfb01" />
+
+Then we have to repair the SiO2 by removing using the HCL acid which reacts to SiO2 to remove the Oxide part. Then we regrow the High quality SiO2 with the same thickness. Oxide capacitane is controlled using the oxide thickness. Doping concentration is maintained by the p and n type impurity that we added. 
+
+<img width="938" alt="image" src="https://github.com/user-attachments/assets/55bc63a5-0d82-4ad2-bd13-ee935016a4c0" />
+
+The next step is the formation of gate where we deposit the thick polysilicon layer. The gate should be of low resistance.So, we dope it with some more imputities. We use any N-type materials like Arsenic and implant it on the top of polysilicon for low gate resistance. Then we follow the same steps that we followed above.
+
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/2d0cfa98-5e02-4cf2-beaa-b30b6b2bbec8" />
+
+The top view of the mask6  is shown below and tilted 90 degree. We will see the reason later.
+
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/9325b59d-71ac-4151-bb53-ebf3589ac224" />
+
+The remaining areas of the polysilicon can be removed.
+
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/47e4ee58-7fa4-4799-8741-782b4ecd9fa8" />
+
+Then we remove the photoresist region. Then the remaining we get as gate.
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/9b0ca583-0ab3-4040-adc5-ec3323023422" />
+
