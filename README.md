@@ -665,10 +665,33 @@ The shape of both waveforms are same. In both graph, when the ip is high, the op
 
 ![image](https://github.com/user-attachments/assets/d304db38-3cff-4cb0-ab85-683345d87a13)
 
-Another parameter that defines the robustness in switching threshold(Vm). It is the point where Vin=Vout. The Vm of first graph is around 0.9 and that of second graph is around 1.2. This is a very critical area where there are chances of leakage current. In the upper or lower part of the graph, either pmos or nmos will be in ON state. But, at this point, both will on at the same time(Both will be in saturation region).
+Another parameter that defines the robustness in switching threshold(Vm). It is the point where Vin=Vout. The Vm of first graph is around 0.9 and that of second graph is around 1.2. This is a very critical area where there are chances of leakage current. In the upper or lower part of the graph, either pmos or nmos will be in ON state. But, at this point, both will on at the same time(Both will be in saturation region). 
 
 ![image](https://github.com/user-attachments/assets/e5988cc8-a56f-4d83-bbcb-fb8fe18893a5)
 
 ![image](https://github.com/user-attachments/assets/b9448e7f-c0b3-4673-8f08-7f2baa6f2830)
 
 At this point where Vgs=Vds, Idsp and Idsn are equal but in opposite direction.
+
+3.1.4.SKY_L4 - Static and dynamic simulation of CMOS inverter
+
+We saw the DC transfer characteristics. Now let us try to understand the dynamic characteristics of the CMOS and find the delay. For this we will see the deck which is same as we saw before. But, the only chage is in the Vin we are giving the pulse input and in the simulation command, we are giving code for transient analysis. The pulse input is shown in the diagram below. In the code, "pulse 0 2.5 0(step size) 10p(rise delay) 10p(fall delay) 1n(pulse width) 2n(width of a cycle)"
+
+<img width="932" alt="image" src="https://github.com/user-attachments/assets/81afe6b0-3932-40b7-8725-687f90343425" />
+
+Now we are going to give this wave as the input to the cmos and do transient analysis. We can calculate the rise and fall delay. rise delay is the case where the output rise.
+
+<img width="870" alt="image" src="https://github.com/user-attachments/assets/5900deb8-badf-48e6-95cd-7061c2944977" />
+
+As selected in the diagram, we are selecting the 50% of the waveform and calculate the delay.
+
+<img width="928" alt="image" src="https://github.com/user-attachments/assets/87fae96d-366f-4354-8399-ad3474a5c720" />
+
+So, we get the rise delay as 0.14831. 
+Similarly calculating for the fall delay, we get 0.07167.
+
+<img width="938" alt="image" src="https://github.com/user-attachments/assets/88618412-6374-4e49-bbc8-80cee98d688c" />
+
+This is how we calculate the delay of inverter.
+
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/1a96b2ab-788a-49d8-817e-79939203bb0d" />
