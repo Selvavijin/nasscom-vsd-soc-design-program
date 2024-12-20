@@ -710,3 +710,34 @@ To open the .mag file, we need .tech file. So, we will copy the tech file in the
 
 ![image](https://github.com/user-attachments/assets/9f0f89f7-01af-41bc-b7ce-703943b5e548)
 
+3.2.SKY130_D3_SK2 - Inception of Layout ÃÂ CMOS fabrication process
+3.2.1.SKY_L1 - Create Active regions
+
+16-mask CMOS process:
+The first step is selecting a substrate. All the things that we do in physical design is fabricated on the substrate. There are many substrates available, we will look into one of the commonly used substrate which is the p-type silicon substrate. The substrate doping level should be less than that of well doping. SiO2 act as an insulator.
+
+<img width="924" alt="image" src="https://github.com/user-attachments/assets/e2b0ee1c-9c07-4386-8bd5-75a157bd801b" />
+
+The next step is to create active region for the transistors. And to create active region, we need to create buckets that are isolated. And we have to identify the regions that we are going to create the bucket. We do some things in the photoresist, that will clearly define some layers in the substrate. Mask is placed above the photoresist layer. It is used to protect the n-well region from any reaction.
+
+<img width="934" alt="image" src="https://github.com/user-attachments/assets/22a694d3-9cd3-462d-a940-224f281a41e9" />
+
+When the UV rays are passed on the top layer, the masked layer will not get affected and the other layer will do some chemical reaction and that layer is cutted off.
+
+<img width="925" alt="image" src="https://github.com/user-attachments/assets/d799e2d4-7f40-4127-87bd-5f81d55c4d5a" />
+
+The next step is to remove the mask. 
+
+<img width="938" alt="image" src="https://github.com/user-attachments/assets/21d2d9ba-a42c-4c42-9af2-6b63b3755ffb" />
+
+We can also remove the silicon nitride in the unused area.
+
+<img width="923" alt="image" src="https://github.com/user-attachments/assets/56b37df1-3e8f-4d96-ac8f-d143d57b3379" />
+
+The next step is to remove the photoresist itself. Because, the Si3N4 itself will act as a very good protective layer. If we put the complete setup in the oxidation furnace, only the place which does not have Si3N4 will grow and the other layers are protected. The places where the SiO2 is grown is called Isolation region. So, while fabricating transistors, they won't be able to communicate with eachother because of this isolation region. This process is called LOCOS(Local Oxidation of Silicon)
+
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/8e6f23c5-bb73-44c1-bade-93dd3e2af060" />
+
+The next step is to remove the Si3N4 and this can be done using hot Phosphoric acid.
+
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/8767b9f0-1ca9-4227-88d3-31efac132b8e" />
