@@ -615,4 +615,22 @@ It is difficult to design the inverter from the scratch. So, we will download pa
 
 3.1.2.SKY_L1 - SPICE deck creation for CMOS inverter
 
-To do the SPICE simulation, the first step is to create the SPICE deck which is the connectivity information about the netlist. Here we need to mention the connectivity of the substrate also. So, it is shown as arrow. There are lot of theory in the cload. Now we are not going to looking into it. Just we are taking a value for cload and proceed.
+To do the SPICE simulation, the first step is to create the SPICE deck which is the connectivity information about the netlist. Here we need to mention the connectivity of the substrate also. So, it is shown as arrow. There are lot of theory in the cload. Those things we see when we do the dynamic characteristics of CMOS. Now we are not going to looking into it because we are seeing only static characteristics of CMOS. Just we are taking a value for cload and proceed.
+
+![image](https://github.com/user-attachments/assets/47ff9882-f286-429d-a289-92d145da36e2)
+
+After connectivity, the next step is to define the value for the components. There is another case where the width of the Pmos should be greater than Nmos, we will come to it later. Now let us consider the same width. Next step is to define the input gate voltage and supply voltage. usually the ip gate voltage will be in the multiple of transistor length. 
+
+![image](https://github.com/user-attachments/assets/11ce7dc1-b448-4e81-8d8e-361227506b7d)
+
+Next step is to define the nodes. It is formed between two components. For SPICE simulation we need to say that the component is placed in between this and that node. 
+
+![image](https://github.com/user-attachments/assets/54573841-46d5-4bd8-8071-b7528007f7d0)
+
+Next step is to name the nodes.
+
+![image](https://github.com/user-attachments/assets/b81a6c12-4de8-4135-97f7-a1b142c734c3)
+
+Let us start writing the SPICE deck. *** is for comment. Then the code is written for M1 and M2. Let us understand the M1, out -> node of drain, in->node of gate, vdd->node, vdd->node of substrate, vdd->node of source, pmos->mentions that the M1 is pmos.
+
+![image](https://github.com/user-attachments/assets/294a5486-75d4-4b2b-a55b-7280c8672830)
