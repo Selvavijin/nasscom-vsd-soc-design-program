@@ -741,3 +741,33 @@ The next step is to remove the photoresist itself. Because, the Si3N4 itself wil
 The next step is to remove the Si3N4 and this can be done using hot Phosphoric acid.
 
 <img width="931" alt="image" src="https://github.com/user-attachments/assets/8767b9f0-1ca9-4227-88d3-31efac132b8e" />
+
+3.2.2.SKY_L2 - Formation of N-well and P-well
+
+N-well will be used for NMOS fabrication and P-well will be used for PMOS fabrication. Both can't be done at same time. We need to protect one area while we fabricate the other. Now, again the same steps are repeated like creating a photoresist and mask.
+
+<img width="933" alt="image" src="https://github.com/user-attachments/assets/7b6c078b-45b0-41dc-b215-6f5e16973a21" />
+
+Let us see the top layout of mask. The place where the cursor is placed is the mask region.
+
+<img width="936" alt="image" src="https://github.com/user-attachments/assets/2b95618b-2f71-4be2-b5c8-355520db0f8a" />
+
+Then the UV light is passed and the below layout occurs.
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/987939d6-83e8-4cf5-b99a-b6220db76564" />
+
+Then we remove the mask. Then we create a p-well using Boron which is a p-type material and it is diffused into the p-type substrate using a process called ion implantation. The energy need for the Boron to diffuse through the SiO2 layer is about 200keV. Ion implantation is the process where some ions are shot into the particular area with very high energy. While penetrating throught the layer, the SiO2 layer will get damaged and we will see how we can repair it.
+
+<img width="932" alt="image" src="https://github.com/user-attachments/assets/2382f562-a46b-4370-9802-93dc6ce18dfa" />
+
+The similar steps is followed for N-well. Here we use Phosphorus which is a n-type material and it is heavier than Boron. So, we need quite high energy to penetrate through the Si02 layer.
+
+<img width="933" alt="image" src="https://github.com/user-attachments/assets/df367ea1-4c07-4d8d-b0b9-eb71094f11ce" />
+
+Now we have created the well region. But, the depth of the well is not finalized yet. Then we have to diffuse the well so that it occupies half of the substrate.
+
+<img width="942" alt="image" src="https://github.com/user-attachments/assets/458f8e4d-cd65-4213-8aff-935b38fbaf0b" />
+
+Then we put this setup in a very high temperature about 1100 degree celcius for 4 to 6 hours which is called the drive in diffusion. This make the diffusion of wells. This is called Twin Tub process because there are two tub like structure(N and P well). This is the bucket creation.
+
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/ac095e94-38d1-4612-8bbb-82c5edf8d9c9" />
