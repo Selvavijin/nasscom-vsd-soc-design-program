@@ -607,13 +607,13 @@ Here there is no input or output delay, there is only rise delay, fall delay and
 
 3.Sky130 Day 3 - Design library cell using Magic Layout and ngspice characterization
 3.1.SKY130_D3_SK1 - Labs for CMOS inverter ngspice simulations
-3.1.1.SKY_L0 - IO placer revision
+3.1.0.SKY_L0 - IO placer revision
 
 It is difficult to design the inverter from the scratch. So, we will download pads from the github and see how things work. Now, let us see how the IO pins are placed in the code. Right now it is equidistant and randomly placed. Let us say that we need to change the IO pins to another IO strategy(current strategy is present in floorplan.tcl file). There are 4 strategies supported by IO space(An opensource EDA tool to place the pins around the core). Currently the IO mode is set to 1. Also, 0 is one of the modes, 2 is also one of the modes. Now, let us switch the mode to 2. The output file is shown below.
 
 ![image](https://github.com/user-attachments/assets/391ac35a-a3a9-4740-ae2d-28ca23c1aec0)
 
-3.1.2.SKY_L1 - SPICE deck creation for CMOS inverter
+3.1.1.SKY_L1 - SPICE deck creation for CMOS inverter
 
 To do the SPICE simulation, the first step is to create the SPICE deck which is the connectivity information about the netlist. Here we need to mention the connectivity of the substrate also. So, it is shown as arrow. There are lot of theory in the cload. Those things we see when we do the dynamic characteristics of CMOS. Now we are not going to looking into it because we are seeing only static characteristics of CMOS. Just we are taking a value for cload and proceed.
 
@@ -631,6 +631,29 @@ Next step is to name the nodes.
 
 ![image](https://github.com/user-attachments/assets/b81a6c12-4de8-4135-97f7-a1b142c734c3)
 
-Let us start writing the SPICE deck. *** is for comment. Then the code is written for M1 and M2. Let us understand the M1, out -> node of drain, in->node of gate, vdd->node, vdd->node of substrate, vdd->node of source, pmos->mentions that the M1 is pmos.
+Let us start writing the SPICE deck. *** is for comment. Then the code is written for M1 and M2. Let us understand the M1, out -> node of drain, in->node of gate, vdd->node, vdd->node of source, vdd->node of substrate, pmos->mentions that the M1 is pmos.
 
 ![image](https://github.com/user-attachments/assets/294a5486-75d4-4b2b-a55b-7280c8672830)
+
+3.1.2.SKY_L2 - SPICE simulation lab for CMOS inverter
+  Once we write the commands for all the components in the netlise, we need to write command for simulation. Here, .dc Vin 0 2.5 0.05 states that the input voltage is sweeping from 0 to 2.5V at the step size of 0.05. The final step is describe the model file.  This has the complete description of the nmos and pmos transistors. All the details for the nmos and pmos are taken from this file by identifying the nmos or pmos keyword that is mentioned in M1, M2.
+
+![image](https://github.com/user-attachments/assets/b56a2f47-a21e-4949-bcc4-a0d0a35635d9)
+
+Now let us see the model file.
+
+![image](https://github.com/user-attachments/assets/7e2da4ee-e6a7-436e-a4d6-32a46887f341)
+M2 is identified as pmos by using this keyword. Now the simulation is done using ngspice. 
+The simulation result of above code is given below. At is center part, it is slightly shifted to the left. Let us see it why later.
+
+![image](https://github.com/user-attachments/assets/6138cb0a-0500-448e-89cc-1977dda99735)
+
+Now we are increasing the pmos width to 2.5 times of nmos. Why?, we will see it later. The code for this case is shown below. 
+
+![image](https://github.com/user-attachments/assets/a6548586-0f00-40ab-8eee-3b66097b39a7)
+
+The output of this case is shown below.
+
+![image](https://github.com/user-attachments/assets/338cd8a6-32c8-4393-ad8d-80a6f27eb221)
+
+we will compare the two graph in the next video.
