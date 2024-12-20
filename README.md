@@ -657,3 +657,18 @@ The output of this case is shown below.
 ![image](https://github.com/user-attachments/assets/338cd8a6-32c8-4393-ad8d-80a6f27eb221)
 
 we will compare the two graph in the next video.
+
+3.1.3.SKY_L3 - Switching Threshold Vm
+
+Each types has different applications. There is nothing good or bad. 
+The shape of both waveforms are same. In both graph, when the ip is high, the op is low and vice versa. This shows that the Cmos is very Robust. 
+
+![image](https://github.com/user-attachments/assets/d304db38-3cff-4cb0-ab85-683345d87a13)
+
+Another parameter that defines the robustness in switching threshold(Vm). It is the point where Vin=Vout. The Vm of first graph is around 0.9 and that of second graph is around 1.2. This is a very critical area where there are chances of leakage current. In the upper or lower part of the graph, either pmos or nmos will be in ON state. But, at this point, both will on at the same time(Both will be in saturation region).
+
+![image](https://github.com/user-attachments/assets/e5988cc8-a56f-4d83-bbcb-fb8fe18893a5)
+
+![image](https://github.com/user-attachments/assets/b9448e7f-c0b3-4673-8f08-7f2baa6f2830)
+
+At this point where Vgs=Vds, Idsp and Idsn are equal but in opposite direction.
