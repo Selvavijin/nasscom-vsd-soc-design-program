@@ -695,3 +695,18 @@ Similarly calculating for the fall delay, we get 0.07167.
 This is how we calculate the delay of inverter.
 
 <img width="946" alt="image" src="https://github.com/user-attachments/assets/1a96b2ab-788a-49d8-817e-79939203bb0d" />
+
+3.1.5.SKY_L5 - Lab steps to git clone vsdstdcelldesign
+
+We are not goint to build the inverter from the scratch, instead we will clone a github link and use it. From there we get .mag file. We are going to do spice extraction and post layout spice simulation.
+
+![image](https://github.com/user-attachments/assets/d2b2c646-8271-4635-955a-85b7f90a88d2)
+
+To open the .mag file, we need .tech file. So, we will copy the tech file in the cloned directory itself.
+
+![image](https://github.com/user-attachments/assets/453a8b9a-1614-4a43-8cfa-fd1ee5294266)
+
+'&' is used to free up the command prompt. If we didn't give it, it will be like as shown below.
+
+![image](https://github.com/user-attachments/assets/9f0f89f7-01af-41bc-b7ce-703943b5e548)
+
