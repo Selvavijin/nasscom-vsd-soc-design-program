@@ -811,3 +811,29 @@ Then we remove the photoresist region. Then the remaining we get as gate.
 
 <img width="935" alt="image" src="https://github.com/user-attachments/assets/9b0ca583-0ab3-4040-adc5-ec3323023422" />
 
+3.2.4.SKY_L4 - Lightly doped drain (LDD) formation
+
+So, as mentioned earlier, Pmos will be fabricated in the N-well. For that we need P+ source and drain and lightly doped P-. Similar case for P-well.
+
+![image](https://github.com/user-attachments/assets/ca84990d-2733-4798-87a6-ad1ba9740794)
+
+We can go with P+ and N(Which is already present). Why this P- is needed ? . 2 reasons for this as shown in the image below.
+
+![image](https://github.com/user-attachments/assets/7c776e0c-cc9e-4d92-bc91-3c220c1ca5f5)
+
+Let us understand the Hot electron effect first. E-Electric field, d-device size. When the size of the device decreases, the Electric field increases, so the electrons and holes will attain the tremendous amount of energy which even break Si-Si bonds leading to more holes and electrons. The general conduction band energy is 3.2eV. So, if the carriers crosses this voltage, it will enter into the SiO2 layer.
+In the second effect, for short channels, the drain area will just penetrates into the channel area.So, it is difficult for the gate to control the source and drain current.
+The standard steps for the Photolithography remains same. And we are passing n-type impurity like phosphorus into the p-well. Then the N-(Lightly doped) implant takes place. Here, the dose of the phosphorus should be carefully chosen so that it does not diffuse deep in the well. The gate will protect phosphorus from entering into the center area.
+
+![image](https://github.com/user-attachments/assets/ea257dfc-3d7d-42a2-b2cd-a7566459d24b)
+
+![image](https://github.com/user-attachments/assets/ff0513b2-65b8-4c1e-b97f-9d329c3f93fb)
+
+The process is not over yet. When we create the actual source and drain, the Lightly Doped regions should not get disturbed. So, we need to protect these. We can do this by using the side-wall spacer zone.
+We have to deposit a thick layer of Si3N4 or SiO2 on the top and do anisotropic etching.
+
+![image](https://github.com/user-attachments/assets/a01ebcb6-6656-4168-99e2-440690b4bbb4)
+
+![image](https://github.com/user-attachments/assets/371d7572-b68c-4894-a8e5-ad603f2af183)
+
+As shown in the above diagram, the green coloured layer protects the below Lightly doped region during the Source and drain formation.
