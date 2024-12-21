@@ -888,4 +888,47 @@ These are the contacts that we need to come out from the chip. So, we can remove
 
 ![image](https://github.com/user-attachments/assets/c087d761-e429-446c-bba4-6795ae773362)
 
+3.2.7.SKY_L7 - Higher level metal formation
+
+Now we have an uneven surface. So, we deposit a thick layer of SiO2.
+
+![image](https://github.com/user-attachments/assets/bfbc02ab-c3cf-49e0-9c8b-ff84ee2b5288)
+
+Still we have uneven surface. We polish this surface which is called Chemical Mechanical Polishing(CMP).
+
+![image](https://github.com/user-attachments/assets/b372446c-0c7a-4846-9941-2adc9f051eaa)
+
+We drill the contact points by using the photolithography method. Then we deposit a thin layer of TiN. Because it acts as a very good barrier for the lower and higher metal layer.
+
+![image](https://github.com/user-attachments/assets/b856dbec-98d1-402c-9086-61001a4a2145)
+
+Blanket tungsten layer helps to get a very good contact from bottom to top.
+
+![image](https://github.com/user-attachments/assets/d56b76a3-b1f6-46d3-aa61-a166af4c9a11)
+
+Again we do CMP
+
+![image](https://github.com/user-attachments/assets/a8f5321c-2c36-461d-ac2b-1c67a0a5aea3)
+
+Now we have to bring these contact points outside the chip. So, we deposit a Al layer and do photolithography steps. Here 13th mask is used. 
+
+![image](https://github.com/user-attachments/assets/640ffd2b-8283-4b44-b3be-8e4891dbc5d6)
+
+![image](https://github.com/user-attachments/assets/faa09be0-7c65-4ec4-8092-6b38e4a00f7a)
+
+Again we have to move to higher level metal. So, again deposit SiO2 and do CMP. Then we do Photolithography to drill holes. Then deposit TiN
+
+![image](https://github.com/user-attachments/assets/0842a973-ecf7-485c-852b-a0b112ec6193)
+
+Then we deposit Blanket tungsten layer and then deposit slightly thicker Al.
+
+![image](https://github.com/user-attachments/assets/2945403b-2575-4c25-bb20-0864d17d5062)
+
+Then we deposit Si3N4 which is used to protect the chip. Here we use Mask-16 to drill and get the contacts outside the chip.
+
+![image](https://github.com/user-attachments/assets/b026d0a5-cac9-42e8-a1fd-15d805521303)
+
+This is the 16-Mask process.
+
+![image](https://github.com/user-attachments/assets/ef12bd5c-bd32-4cc7-9e00-51c681b70512)
 
