@@ -991,4 +991,40 @@ We can reduce the error by selecting the error region and selecting the respecti
 
 ![image](https://github.com/user-attachments/assets/f9ef7fe4-70e8-49c2-92db-0323edac26da)
 
-How do we know what is the logical functioning of this inverter?. To understand that, first we extract the spice and we do simulation on that.
+How do we know what is the logical functioning of this inverter?. To understand that, first we extract the spice and we do simulation on ngspice.
+The extracted file is shown below.
+![image](https://github.com/user-attachments/assets/ff598cb7-fc69-4189-a87e-fcec10f664af)
+
+We will use this .ext file to create spice file for ngspice. 
+
+Now the spice file is created.
+![image](https://github.com/user-attachments/assets/81a400ce-60ac-43be-970c-9ba3af2a795b)
+
+The spice file is shown below. It can be opened using vim 'sky...spice' command
+
+![image](https://github.com/user-attachments/assets/9e3e9f09-2ad5-495d-b886-bdd7d7fbfeb5)
+
+3.3.SKY130_D3_SK3 - Sky130 Tech File Labs
+3.3.1.SKY_L1 - Lab steps to create final SPICE deck using Sky130 tech
+
+The understanding of the spice file is shown below.
+
+![image](https://github.com/user-attachments/assets/3beaaf20-78c9-45cb-9c05-eb56f5ef2d6d)
+
+Now a pulse voltage is given as input to the gate(Va), Vss and Vdd.
+
+![image](https://github.com/user-attachments/assets/61355075-f299-4634-8494-a1044a3a96f4)
+
+![image](https://github.com/user-attachments/assets/d2127572-2174-429c-9b51-ebfc72c3198b)
+
+![image](https://github.com/user-attachments/assets/9b98cfa0-b835-4d0b-8e12-e2ae95613a2a)
+
+Here, we have included the libs file for nmos and pmos, Vdd, Vss, Va and finally we added the code for transient analysis. Also, we have changed the scale value by seeing the dimension of the lowest box in layout.
+![image](https://github.com/user-attachments/assets/e3039577-969f-4aec-8e5e-1a3e99bd8d83)
+
+Also there is a small change in the code. We modified the pshort to pshort_model and nshort to nshort_model after referring to the pshort and nshort file.
+![image](https://github.com/user-attachments/assets/d33dc523-a5dc-4b67-a0ba-06f37dfce926)
+
+Now the spice deck is ready. To run it, we can give the command, 'ngspice sky...spice' 
+
+![image](https://github.com/user-attachments/assets/95494782-98aa-4806-9930-f0645f9bf18e)
