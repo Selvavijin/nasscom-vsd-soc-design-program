@@ -837,3 +837,24 @@ We have to deposit a thick layer of Si3N4 or SiO2 on the top and do anisotropic 
 ![image](https://github.com/user-attachments/assets/371d7572-b68c-4894-a8e5-ad603f2af183)
 
 As shown in the above diagram, the green coloured layer protects the below Lightly doped region during the Source and drain formation.
+
+3.2.5.SKY_L5 - Source ÃÂ drain formation
+
+Then a thin layer of SiO2 is added over the top to avoid the effect of channeling.
+
+![image](https://github.com/user-attachments/assets/d72958d3-52b2-4727-ad54-60533ab73e84)
+
+Now, we are using mask 9 with the same procedure above.
+
+![image](https://github.com/user-attachments/assets/c5118808-a3f4-4237-b94a-6c318b49560e)
+
+![image](https://github.com/user-attachments/assets/94c00613-976b-43f6-8fc5-3053757c2804)
+
+Now we got a N+ source, lightly doped N- region, P region, Lightly doped N- region, N+ drain
+
+![image](https://github.com/user-attachments/assets/989dc56b-4a94-4bcb-a4ff-516bd02f9fc2)
+
+We put this setup in high temperature annealing(method used for diffusion of layers) of 1000 degree celcius for some deep penetration into the wells.
+
+![image](https://github.com/user-attachments/assets/4652ebd4-af93-4241-8fb6-64fae3bfa1c3)
+
