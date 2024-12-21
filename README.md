@@ -838,7 +838,7 @@ We have to deposit a thick layer of Si3N4 or SiO2 on the top and do anisotropic 
 
 As shown in the above diagram, the green coloured layer protects the below Lightly doped region during the Source and drain formation.
 
-3.2.5.SKY_L5 - Source ÃÂ drain formation
+3.2.5.SKY_L5 - Source and drain formation
 
 Then a thin layer of SiO2 is added over the top to avoid the effect of channeling.
 
@@ -857,4 +857,35 @@ Now we got a N+ source, lightly doped N- region, P region, Lightly doped N- regi
 We put this setup in high temperature annealing(method used for diffusion of layers) of 1000 degree celcius for some deep penetration into the wells.
 
 ![image](https://github.com/user-attachments/assets/4652ebd4-af93-4241-8fb6-64fae3bfa1c3)
+
+3.2.6.SKY_L6 - Local interconnect formation
+
+Contacts are very important because that are the only thing that is accessible to users to control the electrical characteristics of mos.
+Remove the screen layer.
+
+![image](https://github.com/user-attachments/assets/03e568e6-39c9-4d90-8109-816ae60e9520)
+
+Titanium - metal with very low resistivity. 
+sputtering - Hit the titanium metal with some Argon gas. so, the metal particles in titanium is removed and deposited on the substrate.
+
+![image](https://github.com/user-attachments/assets/3ea74a66-a28f-42bd-b4d5-8c9d28c7bddf)
+
+![image](https://github.com/user-attachments/assets/695e6851-fc2a-4f85-acff-e3fcf80deb8b)
+
+The next step is to create the contact between the titanium that we deposited and the source, drain and gate. This can be done by heating the wafter with the N2 ambient at 600 to 700 degree celcius. The result is we get TiSi2 which is low resistant and can be used for local interconnect.
+
+![image](https://github.com/user-attachments/assets/4dc17c37-4e5e-4897-be17-8a17e91e5a4a)
+
+Also, there is TiN layer is developed which is used only for local communication.
+
+![image](https://github.com/user-attachments/assets/e06e67ff-8225-453c-9409-2c2d56235e26)
+
+![image](https://github.com/user-attachments/assets/51bf8f4c-f600-4d28-9fe4-8e58bd6cc232)
+
+These are the contacts that we need to come out from the chip. So, we can remove the remaining TiN by RCA cleaning.
+
+![image](https://github.com/user-attachments/assets/064aa377-23f6-422e-9185-9c9e15d7715c)
+
+![image](https://github.com/user-attachments/assets/c087d761-e429-446c-bba4-6795ae773362)
+
 
