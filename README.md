@@ -932,3 +932,63 @@ This is the 16-Mask process.
 
 ![image](https://github.com/user-attachments/assets/ef12bd5c-bd32-4cc7-9e00-51c681b70512)
 
+3.2.8.SKY_L8 - Lab introduction to Sky130 basic layers layout and LEF using inverter
+
+![image](https://github.com/user-attachments/assets/f3aaad0f-85b8-4e27-9bcf-f83e8170fec8)
+
+This is the layout of the CMOS inverter. Let us understand the layers first. The place where the cursor is placed is the local interconnect(local i) or the first layer.
+
+![image](https://github.com/user-attachments/assets/f07ee9ed-90d9-4bf9-b908-5f3d8254ea65)
+
+Then we have metal 1
+![image](https://github.com/user-attachments/assets/825b411f-fad9-479c-aaa9-79a1912ee348)
+
+Then we have metal 2 which is pinkish cross
+![image](https://github.com/user-attachments/assets/65e3dcac-241b-476a-bb09-30fc5e7b36da)
+
+Then we have N-well
+![image](https://github.com/user-attachments/assets/f26a4a4f-7581-4382-864f-275faec8b953)
+
+For n diffusion and p diffusion the colours are green and brown respectively. If we hover the cursor on the left side green color, we can see the caption on the top as n diffusion. When, the poly cross the n diffusion, it becomes the NMOS.
+To confirm it, we can hover the cursor in the poly on the intersection of n diffusion layer, and click s. This selects the area. Then we can move to the tkon file and type 'what' and the result will be nmos.
+
+![image](https://github.com/user-attachments/assets/fd022069-6098-4ea3-abc6-ffffd97edf0c)
+
+To check whether the drain of the nmos and pmos is connected, we can hover over there and click 's' three times to see what are connected over there.
+
+![image](https://github.com/user-attachments/assets/1771c18a-8256-42a6-9202-7dc78d9a0fb2)
+
+Also, how to build a inverter form scratch is described in 'https://github.com/nickson-jose/vsdstdcelldesign'
+
+3.2.9.SKY_L9 - Lab steps to create std cell layout and extract spice netlist
+
+![image](https://github.com/user-attachments/assets/7ced32aa-7bfb-4f20-b62c-afe0b4b4a89e)
+
+Here, inside the root cell box, llx-lower left x, urx-upper right x. Inside the FIXED_BBOX, (0 0 ) is the lower left corner value and the next value is upper right corner value.
+
+![image](https://github.com/user-attachments/assets/ad021672-b376-41be-bf15-5e65067c8153)
+
+The contact where the cursor is placed is the contact between the locali and metal 1.
+
+![image](https://github.com/user-attachments/assets/1add0a6e-a14a-4e6a-bff6-9806392e571e)
+
+The place where the cursor is placed is the contact between the locali and N-well.
+Generally, for PMOS there is N-well and above that there is locali and above that there is metal 1.
+
+Similarly, for nmos there is no well so, this contact is connected with the p-substrate and the locali.
+![image](https://github.com/user-attachments/assets/f1e01bb7-7650-458e-9b50-89f93848957e)
+
+Magic is an interactive window. If we erase a part from the layout as shown below, we can see the updated DRC value at the top. And if we need to see where the error is, go to DRC->DRC find next error.
+
+![image](https://github.com/user-attachments/assets/f28afc3c-91f2-4749-8746-2d2eba999791)
+
+If we need to know what is the error, after following the above steps, go to the tkcon window. We need to make sure that the final design should be DRC free.
+
+We can reduce the error by selecting the error region and selecting the respective layer as shown below.
+![image](https://github.com/user-attachments/assets/b9babffc-5413-4195-aacd-47474ff9e816)
+
+![image](https://github.com/user-attachments/assets/74af334e-6ad4-4b89-bc30-6b512eea237e)
+
+![image](https://github.com/user-attachments/assets/f9ef7fe4-70e8-49c2-92db-0323edac26da)
+
+How do we know what is the logical functioning of this inverter?. To understand that, first we extract the spice and we do simulation on that.
