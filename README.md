@@ -1048,3 +1048,14 @@ Let us take a buffer of size 1 as an example. The delay table is calculated by a
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/36519160-c1a2-40c2-8ee1-b8a867c9e177" />
 
 Each cells with different size and different threshold voltage will have different delay table. In the above diagram, for a buffer of fixed size(1) and fixed threshold voltage, the delay table is given.
+
+4.1.5.SKY_L5 - Delay table usage Part 1
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/a6e40ab2-b4f6-4ed7-88e3-3acb8029065e" />
+
+Let us apply this concept in real circuits
+
+![image](https://github.com/user-attachments/assets/76a9b217-f79d-45be-b904-1357702e0dbf)
+
+Let us consider 40ps as input transition and assume 60fF as the output load. In the delay table, there is no 60fF, so we will use 50fF and 70fF which are closer to the 60fF to find the identity and solve to find the delay. Let us say the delay is x9'.
+The objective is to find the delay or clock latency in the FF at the end. To do that we find the delay of individual elements.
