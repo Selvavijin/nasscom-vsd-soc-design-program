@@ -1000,7 +1000,7 @@ We will use this .ext file to create spice file for ngspice.
 Now the spice file is created.
 ![image](https://github.com/user-attachments/assets/81a400ce-60ac-43be-970c-9ba3af2a795b)
 
-The spice file is shown below. It can be opened using vim 'sky...spice' command
+The spice file is shown below. It can be opened using 'vim sky...spice' command
 
 ![image](https://github.com/user-attachments/assets/9e3e9f09-2ad5-495d-b886-bdd7d7fbfeb5)
 
@@ -1028,3 +1028,17 @@ Also there is a small change in the code. We modified the pshort to pshort_model
 Now the spice deck is ready. To run it, we can give the command, 'ngspice sky...spice' 
 
 ![image](https://github.com/user-attachments/assets/95494782-98aa-4806-9930-f0645f9bf18e)
+
+4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
+4.1.SKY130_D4_SK1 - Timing modelling using delay tables
+4.1.4.SKY_L4 - Introduction to delay tables
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/dea6d934-7b0d-41b8-91fa-ffe62a7bc9d6" />
+
+We can give clock inputs using these gates as shown in the diagram. How do we use this in the clock tree. A sample snippet of clock tree is shown in the diagram below. Here, a buffer is replaced with an AND gate for gated clock. While replacing we should consider parameters like skew, latency.... We have to consider all these things. First let us consider the timing parameters of the first circuit. We will come back to the second circuit later.
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/5d519ea5-b1a6-4b59-b790-07664af95395" />
+
+The assumptions and observations are shown in the below figure. Why do we consider these observations?, because the load of each and every buffer will not be same so, the input to the buffer will also not be same. So, there are varying gusses. So, there is a concept called Delay tables.
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/9a1d6726-183a-4603-b1b0-9d691042c1ae" />
