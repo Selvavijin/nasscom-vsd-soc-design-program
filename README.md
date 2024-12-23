@@ -1042,3 +1042,9 @@ We can give clock inputs using these gates as shown in the diagram. How do we us
 The assumptions and observations are shown in the below figure. Why do we consider these observations?, because the load of each and every buffer will not be same so, the input to the buffer will also not be same. So, there are varying gusses. So, there is a concept called Delay tables.
 
 <img width="960" alt="image" src="https://github.com/user-attachments/assets/9a1d6726-183a-4603-b1b0-9d691042c1ae" />
+
+Let us take a buffer of size 1 as an example. The delay table is calculated by applying different input transitions and the output is also varied with different loads. S, with this varying input transitions and output load, the delay of that particular cell is characterized and put in a table form.
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/36519160-c1a2-40c2-8ee1-b8a867c9e177" />
+
+Each cells with different size and different threshold voltage will have different delay table. In the above diagram, for a buffer of fixed size(1) and fixed threshold voltage, the delay table is given.
