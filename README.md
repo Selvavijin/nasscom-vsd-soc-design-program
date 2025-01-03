@@ -1029,6 +1029,10 @@ Now the spice deck is ready. To run it, we can give the command, 'ngspice sky...
 
 ![image](https://github.com/user-attachments/assets/95494782-98aa-4806-9930-f0645f9bf18e)
 
+3.3.2.SKY_L2 - Lab steps to characterize inverter using sky130 model files
+
+
+
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
 4.1.SKY130_D4_SK1 - Timing modelling using delay tables
 4.1.4.SKY_L4 - Introduction to delay tables
