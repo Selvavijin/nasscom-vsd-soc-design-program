@@ -1042,6 +1042,12 @@ If find the difference between both the X values, we will get the rise transitio
 
 In the similar way we can calculate the Cell fall delay. These all things are done for a temperature of 27 degree celcius. In the next step, we are going to use the layout to create a lef file. And we try to add this inverter cell in picorv32 using openlane.
 
+3.3.3.SKY_L3-Lab introduction to Magic tool options and DRC rules.
+
+3.3.4.SKY_L4-Lab introduction to Sky 140 pdk's and steps to download labs.
+
+
+
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
 4.1.SKY130_D4_SK1 - Timing modelling using delay tables
 4.1.4.SKY_L4 - Introduction to delay tables
