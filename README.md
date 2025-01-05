@@ -1031,7 +1031,16 @@ Now the spice deck is ready. To run it, we can give the command, 'ngspice sky...
 
 3.3.2.SKY_L2 - Lab steps to characterize inverter using sky130 model files
 
+![image](https://github.com/user-attachments/assets/501acd81-cbb6-4444-9e41-9890d72d4055)
 
+ This the output we are getting for the transient analysis. Next we are going to do the characterization. For that we need to consider 4 parameters. 1. rise transition ie) the ability of the output waveform to transit form its 20% of max value to 80% of max value. Similarly, 2. Fall transition ie) the ability of the output waveform to fall form its 80% of max value to 20% of max value. We can find this delay by zooming into graph and clicking at the point. So that it will get printed on the plot terminal as shown below.
+ ![image](https://github.com/user-attachments/assets/db74d300-7db2-4976-9308-478fec70f57a)
+
+If find the difference between both the X values, we will get the rise transition. Similarly we can find the fall transition. 3. Cell rise delay. This can be calculated by the difference between the 50% of output wave to the 50% of input waveform. And it is shown below.
+
+![image](https://github.com/user-attachments/assets/a43c3e58-7c77-4bcf-8437-95ba46423e87)
+
+In the similar way we can calculate the Cell fall delay. These all things are done for a temperature of 27 degree celcius. In the next step, we are going to use the layout to create a lef file. And we try to add this inverter cell in picorv32 using openlane.
 
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
 4.1.SKY130_D4_SK1 - Timing modelling using delay tables
