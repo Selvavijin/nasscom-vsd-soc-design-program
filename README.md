@@ -1046,6 +1046,20 @@ In the similar way we can calculate the Cell fall delay. These all things are do
 
 3.3.4.SKY_L4-Lab introduction to Sky 140 pdk's and steps to download labs.
 
+This is the website where we find the documentation for the skywater pdks and it has design rules.
+
+![image](https://github.com/user-attachments/assets/bb49e83d-fd8c-4814-98a0-b6834257ac95)
+
+![image](https://github.com/user-attachments/assets/bb5d2daf-78c6-4486-8701-fa35554003d0)
+
+![image](https://github.com/user-attachments/assets/40dbe46f-b96f-47fd-9dc7-1a14a09c0560)
+
+3.3.5.SKY_L5 - Lab introduction to Magic and steps to load Sky130 tech-rules.
+
+![image](https://github.com/user-attachments/assets/baee6778-0ea3-4d4b-9abf-355e31737eed)
+
+3.3.6.SKY_L5-Lab exercise to fix poly.9 error in Sky130 tech-file.
+
 
 
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
