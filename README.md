@@ -1060,7 +1060,9 @@ This is the website where we find the documentation for the skywater pdks and it
 
 3.3.6.SKY_L5-Lab exercise to fix poly.9 error in Sky130 tech-file.
 
+Here the poly is loaded and there are errors present there. That has to be founded and corrected.
 
+![image](https://github.com/user-attachments/assets/b139d5d7-fb98-45b8-ac70-a0f761e4b240)
 
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
 4.1.SKY130_D4_SK1 - Timing modelling using delay tables
