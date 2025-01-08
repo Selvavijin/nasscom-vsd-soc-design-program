@@ -1064,6 +1064,16 @@ Here the poly is loaded and there are errors present there. That has to be found
 
 ![image](https://github.com/user-attachments/assets/b139d5d7-fb98-45b8-ac70-a0f761e4b240)
 
+Go to the sky130.tech file using the vim sky130.tech and find the 'poly.9' by typing '/poly.9' in the file and edit it as shown below. we have to edit in two places.
+
+![image](https://github.com/user-attachments/assets/ec6d04f1-e05a-429d-9bc5-47c1deaede71)
+
+![image](https://github.com/user-attachments/assets/138c05ee-0b19-4fbe-af5d-cbca93459b88)
+
+Then use the command 'tech load sky130.tech' and then 'drc check' in the tkcon file to see the difference in the layout. Because there are errors in the layout, we do this to correct the errors. 
+
+![image](https://github.com/user-attachments/assets/8145d649-844d-4588-b005-6115f069c478)
+
 4.Sky130 Day 4 - Pre-layout timing analysis and importance of good clock tree
 4.1.SKY130_D4_SK1 - Timing modelling using delay tables
 4.1.4.SKY_L4 - Introduction to delay tables
